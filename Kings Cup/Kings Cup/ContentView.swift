@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var card = "hearts_7"
+    @State var task = "Heaven"
         
     var body: some View {
         
@@ -18,6 +19,9 @@ struct ContentView: View {
                 .ignoresSafeArea()
                 
             VStack {
+                Spacer()
+                Text(task).font(.largeTitle).fontWeight(.bold).foregroundColor(Color.white)
+                    .fontDesign(.rounded)
                 Spacer()
                 Image(card)
                 Spacer()
@@ -51,43 +55,43 @@ struct ContentView: View {
         
         // Print rule
         if cardVal == 2 {
-            print("You")
+            task = "You"
         }
         else if cardVal == 3 {
-            print("Me")
+            task = "Me"
         }
         else if cardVal == 4 {
-            print("Floor")
+            task = "Floor"
         }
         else if cardVal == 5 {
-            print("Guys")
+            task = "Guys"
         }
         else if cardVal == 6 {
-            print("Chicks")
+            task = "Chicks"
         }
         else if cardVal == 7 {
-            print("Heaven")
+            task = "Heaven"
         }
         else if cardVal == 8 {
-            print("Mate")
+            task = "Mate"
         }
         else if cardVal == 9 {
-            print("Rhyme")
+            task = "Rhyme"
         }
         else if cardVal == 10 {
-            print("Categories")
+            task = "Categories"
         }
         else if cardVal == 11 {
-            print("Never have I ever")
+            task = "Never have I ever"
         }
         else if cardVal == 12 {
-            print("Questions")
+            task = "Questions"
         }
         else if cardVal == 13 {
-            print("King's cup")
+            task = "King's cup"
         }
         else {
-            print("Waterfall")
+            task = "Waterfall"
         }
     }
 }
